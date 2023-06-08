@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntropoPollWebApi", "AntropoPollWebApi\AntropoPollWebApi.csproj", "{00BF3D31-4706-4DE7-A0BF-CC058D0585B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntropoPollWebApi.Core", "AntropoPollWebApi.Core\AntropoPollWebApi.Core.csproj", "{7C1C9A58-9DCE-4B2E-B846-CA7EE3C7B2CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D8870B6-B379-4322-991D-FE4CF1677BE1}"
+	ProjectSection(SolutionItems) = preProject
+		.drone.yml = .drone.yml
+		notify.sh = notify.sh
+		readme.md = readme.md
+		updateConteiner.sh = updateConteiner.sh
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AntropoPollWorker", "AntropoPollWorker\AntropoPollWorker.csproj", "{C3FCB302-E2AC-42B8-B5CF-70E39D1FCC34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00BF3D31-4706-4DE7-A0BF-CC058D0585B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00BF3D31-4706-4DE7-A0BF-CC058D0585B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00BF3D31-4706-4DE7-A0BF-CC058D0585B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00BF3D31-4706-4DE7-A0BF-CC058D0585B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C1C9A58-9DCE-4B2E-B846-CA7EE3C7B2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1C9A58-9DCE-4B2E-B846-CA7EE3C7B2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1C9A58-9DCE-4B2E-B846-CA7EE3C7B2CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1C9A58-9DCE-4B2E-B846-CA7EE3C7B2CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3FCB302-E2AC-42B8-B5CF-70E39D1FCC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3FCB302-E2AC-42B8-B5CF-70E39D1FCC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3FCB302-E2AC-42B8-B5CF-70E39D1FCC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3FCB302-E2AC-42B8-B5CF-70E39D1FCC34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2C95072-253F-475D-864A-8263098DCF53}
+	EndGlobalSection
+EndGlobal

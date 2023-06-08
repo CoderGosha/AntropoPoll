@@ -1,0 +1,48 @@
+kind: pipeline
+type: exec
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+ 
+steps:
+- name: build web
+  commands:
+  - docker build -t antropopoll . ;
+ 
+- name: build worker
+  commands:
+  - docker build -t antropopollworker . -f DockerfileWorker ;
+   
+- name: delete old containers
+  failure: ignore
+  commands:
+  - docker stop antropopoll;
+  - docker stop antropopollworker;
+  - docker rm antropopoll;
+  - docker rm antropopollworker;
+ 
+- name: publish
+  commands:
+  - docker run -d --restart on-failure -p 5000:80 --name antropopoll antropopoll;
+  - docker run -d --restart on-failure --name antropopollworker antropopollworker;
+  
+---
+  
+kind: pipeline
+type: docker
+name: notification
+
+platform:
+  os: linux
+  arch: amd64
+  
+steps:
+- name: notification
+  pull: true
+  image: appleboy/drone-telegram
+  settings:
+    token: 
+        from_secret: bot_token
+    to: -1001170260712
